@@ -75,6 +75,10 @@
 
                 @endforeach
 
+                <div>
+                    {{ $recipes->links() }}
+                </div>
+                
             </div>
 
         </div>

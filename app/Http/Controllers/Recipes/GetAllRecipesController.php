@@ -9,7 +9,7 @@ class GetAllRecipesController extends Controller
 {
    public function __invoke()
    {
-      $recipes = Recipe::all();
+      $recipes = Recipe::paginate(10);
 
       return view('recipes.showRecipes', compact('recipes'));
    } 

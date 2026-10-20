@@ -9,7 +9,7 @@ class UserRecipesController extends Controller
 {
    public function __invoke()
    {
-      $recipes = Recipe::where('user_id', auth()->id())->get();
+      $recipes = Recipe::where('user_id', auth()->id())->paginate(10);
 
       return view('recipes.myRecipes', compact('recipes'));
    } 

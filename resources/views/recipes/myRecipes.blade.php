@@ -99,6 +99,9 @@
 
                 @endforeach
 
+                <div>
+                    {{ $recipes->links() }}
+                </div>
             </div>
 
         @endif
